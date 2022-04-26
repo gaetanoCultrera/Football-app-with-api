@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <h1 style="color: red;">The latest news in Italy and Britain!</h1>
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-light" (click)="getNewsEn()" role="button">Upload news for britain</a>
+        <a class="btn btn-light" (click)="getNewsIta()" role="button">Upload news for Ita</a>
+    </div>
+    <div class="row">
+        <div *ngFor='let item of cardsNews' class="col-lg-4 mt-3 mb-3">
+            <div class="card mb-3">
+                <img class="card-img-top" src="{{item.imageUrl}}" alt="sports">
+                <div class="card-body">
+                    <h2>{{item.title}}</h2>
+                    <h5>{{item.description}}</h5>
+                    <a class="btn btn-primary" href="{{item.link}}" role="button">Full article</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+               

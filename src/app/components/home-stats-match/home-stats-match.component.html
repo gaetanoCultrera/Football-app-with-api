@@ -1,0 +1,18 @@
+<div class="container mt-5">
+
+    <h1 style="color: red;">All matches of Serie A and Premier League!</h1>
+
+    <div class="row">
+        <div *ngFor='let item of cards' class="col-lg-3 mt-3 mb-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{item.thumbnail}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5>{{item.title}}</h5>
+                    <p>{{item.competition}}</p>
+                    <a class="btn btn-primary" href="{{item.matchviewUrl}}" role="button">More!</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+

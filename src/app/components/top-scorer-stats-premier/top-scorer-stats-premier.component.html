@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <div class="manage d-flex justify-content-center mt-3">
+        <input [(ngModel)]='term2' type="search" placeholder="search">
+            <button (click)='checkPlayerPremier(term2)' class="btn btn-dark" >search</button>
+    </div>
+    <div class="row">
+        <div *ngFor="let item of scorerDataCheck" class="text-center mt-3">
+            <h2>{{item.playerName}}</h2>
+            <h3><strong>Goals: </strong>{{item.goals}}</h3>
+            <h3><strong>Games played: </strong>{{item.matchesPlayed}}</h3>
+            <h5><strong>Minute played: </strong>{{item.minutesPlayed}}</h5>
+            <h5><strong>Penalties: </strong>{{item.penalties}}</h5>
+        </div>
+    </div>
+    <div *ngIf='scorerDataCheck.length===0'>
+        <div class="row">
+            <h1 *ngIf='scorer.length === 0'>Loading...</h1>
+                <div  *ngFor='let item of userScorer' class="col-md-3 mt-3 text-center">
+                    <h2>{{item.playerName}}</h2>
+                    <h3><strong>{{item.teamName}}</strong></h3>
+                    <h5><strong>Goals: </strong>{{item.goals}}</h5>
+                    <h5><strong>Games played: </strong>{{item.matchesPlayed}}</h5>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+

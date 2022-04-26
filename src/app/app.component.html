@@ -1,0 +1,45 @@
+<div class="box">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">ScoreStatsLive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="">Home</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" >
+              Matches
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button" routerLink="match/serieA">Serie A</button></li>
+              <li><button class="dropdown-item" type="button" routerLink="match/premier">Premier League</button></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" >
+              Top Scorers
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button" routerLink="scorer/serieA">Serie A</button></li>
+              <li><button class="dropdown-item" type="button" routerLink="scorer/premier">Premier League</button></li>
+            </ul>
+          </div>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="news">News</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="live">Live</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+
+

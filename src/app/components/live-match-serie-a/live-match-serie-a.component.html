@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="manage d-flex justify-content-center">
+	</div>
+	<h1 style="color: red;" class="mt-3">Live Match!</h1>
+	<h1 *ngIf='match.length === 0'>Currently no live matches</h1>
+	<div *ngFor="let match of userData" class="match">
+		<div class="match-content d-flex justify-content-around ">
+			<div class="column">
+				<div class="team">
+					<div class="team-logo">
+						<img src="{{match.logoHomeTeam}}">
+					</div>
+					<h2>{{match.homeTeam}}</h2>
+				</div>
+			</div>
+			<div class="column">
+				<div class="match-info text-center">
+					<div class="match-score">
+						<span class="match-score-number">{{match.homeScore}}</span>
+						<span class="match-score-divider">:</span>
+						<span class="match-score-number">{{match.awayScore}}</span>
+					</div>
+					<div class="match-date">
+						<strong>{{match.matchStart | date: 'd MMMM y'}}</strong><br>
+                        <strong>{{match.minute}}</strong>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="team">
+					<div class="team-logo">
+						<img src="{{match.logoAwayTeam}}">
+					</div>
+					<h2>{{match.awayTeam}}</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

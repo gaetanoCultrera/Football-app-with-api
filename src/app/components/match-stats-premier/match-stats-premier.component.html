@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="title mt-2">
+		<h1 *ngIf="match.length===0" class="text-center">Match Premier League 2021/2022</h1>
+	</div>
+	<div class="manage d-flex justify-content-center">
+		<input [(ngModel)]='term' type="date" placeholder="Enter date to view data">
+		<button (click)='search(term)' class="btn btn-dark" >search</button>
+	</div>
+	<div *ngFor="let match of userData" class="match">
+		<div class="match-content d-flex justify-content-around ">
+			<div class="column">
+				<div class="team">
+					<div class="team-logo">
+						<img src="{{match.logoHomeTeam}}">
+					</div>
+					<h2>{{match.homeTeam}}</h2>
+				</div>
+			</div>
+			<div class="column">
+				<div class="match-info text-center">
+					<div class="match-score">
+						<span class="match-score-number">{{match.homeScore}}</span>
+						<span class="match-score-divider">:</span>
+						<span class="match-score-number">{{match.awayScore}}</span>
+					</div>
+					<div class="match-date">
+						<strong>{{match.matchStart | date: 'd MMM y'}}</strong>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="team">
+					<div class="team-logo">
+						<img src="{{match.logoAwayTeam}}">
+					</div>
+					<h2>{{match.awayTeam}}</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
